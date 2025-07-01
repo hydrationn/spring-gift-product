@@ -5,4 +5,4 @@ create table member
     age int,
     email varchar(255),
     primary key(id)
-)
+);
