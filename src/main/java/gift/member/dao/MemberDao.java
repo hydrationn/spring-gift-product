@@ -1,6 +1,6 @@
-package member.dao;
+package gift.member.dao;
 
-import member.entity.Member;
+import gift.member.entity.Member;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 

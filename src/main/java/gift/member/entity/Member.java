@@ -1,4 +1,4 @@
-package member.entity;
+package gift.member.entity;
 
 public record Member (
         Long id,

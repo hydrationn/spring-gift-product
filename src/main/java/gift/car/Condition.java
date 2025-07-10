@@ -1,4 +1,4 @@
-package car;
+package gift.car;
 
 public class Condition {
     public boolean isMovable() {
