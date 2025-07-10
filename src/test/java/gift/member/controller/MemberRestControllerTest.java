@@ -1,6 +1,5 @@
 package gift.member.controller;
 
-import gift.member.dao.MemberDao2;
 import gift.member.entity.Member;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
