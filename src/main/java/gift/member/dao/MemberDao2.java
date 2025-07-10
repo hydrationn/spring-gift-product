@@ -1,11 +1,12 @@
-package member.dao;
+package gift.member.dao;
 
-import member.entity.Member;
+import gift.member.entity.Member;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.simple.JdbcClient;
 import org.springframework.stereotype.Repository;
+import java.util.Optional;
 
-@Repository
+@Repository // 데이터 관련 모든 예외는 DataAccessException으로 추상화해준다.
 public class MemberDao2 {
     private final JdbcClient jdbcClient;
 
@@ -24,12 +25,12 @@ public class MemberDao2 {
                 .update();
     }
 
-    public Member selectMember(Long id) {
-        var sql = "select id, name, age, email from member where id = id";
+    public Optional<Member> selectMember(Long id) {
+        var sql = "select id, name, age, email from member where id = :id";
         return jdbcClient.sql(sql)
                 .param("id", id)
                 .query(getMemberRowMapper())
-                .single();
+                .optional();
     }
 
     private static RowMapper<Member> getMemberRowMapper() {
