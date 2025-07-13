@@ -1,7 +1,6 @@
 package gift;
 
 import gift.member.service.MemberService;
-import gift.wish.controller.WishController;
 import org.springframework.context.ApplicationContext;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
