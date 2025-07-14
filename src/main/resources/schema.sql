@@ -1,3 +1,5 @@
+DROP TABLE IF EXISTS MEMBER;
+
 create table member
 (
     id bigint,
