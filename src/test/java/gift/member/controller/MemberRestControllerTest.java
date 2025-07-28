@@ -43,7 +43,7 @@ public class MemberRestControllerTest {
                 .retrieve()
                 .toEntity(Member.class);
         assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
-        assertThat(response.getBody().name()).isEqualTo("park");
+        assertThat(response.getBody().getName()).isEqualTo("park");
     }
 
     @Test

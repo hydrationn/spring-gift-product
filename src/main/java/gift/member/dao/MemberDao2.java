@@ -18,10 +18,10 @@ public class MemberDao2 {
         var sql = "insert into member(id, name, age, email) values (:id, :name, :age, :email);";
         // ':' 사용 시 순서를 굳이 안 맞춰도 될 뿐만 아니라, 잘못 끼워넣는 실수를 방지할 수 있다.
         jdbcClient.sql(sql)
-                .param("id", member.id())
-                .param("name", member.name())
-                .param("age", member.age())
-                .param("email", member.email())
+                .param("id", member.getId())
+                .param("name", member.getName())
+                .param("age", member.getAge())
+                .param("email", member.getEmail())
                 .update();
     }
 

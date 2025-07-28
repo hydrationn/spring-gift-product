@@ -37,10 +37,10 @@ public class Application {
     public static void insertMember(Connection connection, Member member) throws Exception {
         var sql = "insert into member(id, name, age, email) values (?, ?, ?, ?);";
         var statement = connection.prepareStatement(sql);
-        statement.setLong(1, member.id());
-        statement.setString(2, member.name());
-        statement.setInt(3, member.age());
-        statement.setString(4, member.email());
+        statement.setLong(1, member.getId());
+        statement.setString(2, member.getName());
+        statement.setInt(3, member.getAge());
+        statement.setString(4, member.getEmail());
         statement.execute();
         statement.close();
     }

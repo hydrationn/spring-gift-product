@@ -14,6 +14,6 @@ public class MemberDao {
 
     public void insertMember(Member member) {
         var sql = "insert into member(id, name, age, email) values (?, ?, ?, ?);";
-        jdbcTemplate.update(sql, member.id(), member.name(), member.age(), member.email()); // database에 변화 (값 수정)
+        jdbcTemplate.update(sql, member.getId(), member.getName(), member.getAge(), member.getEmail()); // database에 변화 (값 수정)
     }
 }
