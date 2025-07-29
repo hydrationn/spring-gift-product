@@ -24,6 +24,11 @@ public class OptionBuilder {
         return this;
     }
 
+    public OptionBuilder product(Product product) {
+        this.product = product;
+        return this;
+    }
+
     public Option build() {
         return new Option(name, quantity, product);
     }

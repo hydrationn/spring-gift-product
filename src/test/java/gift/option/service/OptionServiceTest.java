@@ -38,7 +38,7 @@ class OptionServiceTest {
         optionService.create(product.getId(), request);
 
         // then
-        assertThat(optionRepository.findAll())
+        assertThat(optionRepository.findAllByProduct(product))
                 .extracting(Option::getName)
                 .contains(" ");
     }
